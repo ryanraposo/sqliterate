@@ -1,0 +1,24 @@
+{
+  "name": "sqliterate",
+  "version": "1.0.0",
+  "description": "English to SQL, powered by AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanraposo/sqliterate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanraposo/sqliterate/issues"
+  },
+  "homepage": "https://github.com/ryanraposo/sqliterate#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "openai": "^3.0.0"
+  }
+}
