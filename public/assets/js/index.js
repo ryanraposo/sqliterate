@@ -16,13 +16,8 @@ const handleGenerateButtonClick = event => {
         },
         body: JSON.stringify({ tablesText : tablesText, englishQueryText : englishQueryText})
     })
-    .then(response => { // TODO: WHY NO RESPONSE?
-        if (response.ok) {
-            console.log(response);
-            // $sqlQueryTextArea.textContent = response;
-        }
-        alert('Error: ' + response.statusText);
-    })
+    .then((response) => response.json())
+    .then((data) => $sqlQueryTextArea.textContent = data.sqlQuery);
 };
 
 
