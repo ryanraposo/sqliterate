@@ -8,7 +8,7 @@ router.post('/generate', (req, res) => {
 
     getAIResult(tablesText, englishQueryText)
     .then((result) => {
-        const sqlQuery = "SELECT" + result.data.choices[0].text;
+        const sqlQuery = "SELECT" + result;
         res.json( {sqlQuery : sqlQuery} );
     });
 });
