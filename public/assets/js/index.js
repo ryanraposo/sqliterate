@@ -5,6 +5,8 @@ const $generateButton = document.getElementById('generateButton');
 
 
 const handleGenerateButtonClick = event => {
+    $generateButton.disabled = true;
+
     const tablesText = $tablesTextArea.textContent;
     const englishQueryText = $englishQueryTextArea.textContent;
 
@@ -17,7 +19,10 @@ const handleGenerateButtonClick = event => {
         body: JSON.stringify({ tablesText : tablesText, englishQueryText : englishQueryText})
     })
     .then((response) => response.json())
-    .then((data) => $sqlQueryTextArea.textContent = data.sqlQuery);
+    .then((data) => {
+      $sqlQueryTextArea.textContent = data.sqlQuery
+      $generateButton.disabled = false;
+    });    
 };
 
 
